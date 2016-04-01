@@ -11,12 +11,12 @@
 			<li class="dropdown user user-menu">
 				<a href="#" class="dropdown-toggle" data-toggle="dropdown">
 					<i class="fa fa-user fa-fw"></i>
-					{{ AdminAuth::user()->name ?: 'admin' }}
+					{{ Sentinel::check()->first_name ?: 'admin' }}
 				</a>
 				<ul class="dropdown-menu">
 					<li class="user-footer">
 						<div class="pull-right">
-							<a href="{{ route('admin.logout') }}" class="btn btn-default btn-flat">{{ trans('admin::lang.auth.logout') }}</a>
+							<a href="{{ url('logout') }}" class="btn btn-default btn-flat">{{ trans('admin::lang.auth.logout') }}</a>
 						</div>
 					</li>
 				</ul>
